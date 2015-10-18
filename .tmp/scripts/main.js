@@ -1,3 +1,5 @@
+'use strict';
+
 $(document).ready(function () {
     particlesJS.load('welcome-header-container', 'scripts/particlesjs-config.json');
     $('.contact-card').addClass('center-card');
@@ -9,3 +11,4 @@ $(window).resize(function () {
         $('.col-md-4').addClass('col-xs-6');
     }
 }).resize();
+//# sourceMappingURL=main.js.map
