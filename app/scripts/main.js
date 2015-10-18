@@ -1,0 +1,1 @@
+particlesJS.load('welcome-header-container', 'scripts/particlesjs-config.json');
