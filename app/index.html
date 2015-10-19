@@ -14,11 +14,12 @@
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/bower_components/animate.css/animate.css" />
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- endbuild -->
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
@@ -37,48 +38,67 @@
         <div class="container">
             <div class="profile-container">
                 <div class="profile-picture-container">
-                    <img class="rounded-photo" src="https://avatars3.githubusercontent.com/u/4207188?v=2&s=460" alt="Profile Picture">
+                    <img class="rounded-photo animated bounceIn" src="https://avatars3.githubusercontent.com/u/4207188?v=2&s=460" alt="Profile Picture">
                 </div>
-                <h1 class="welcome-header-title">NAZIM AMIN</h1>
-                <p class="welcome-header-snip">Developer, Hackathon Enthusiast, Student</p>
+                <h1 class="welcome-header-title animated fadeInUp">NAZIM AMIN</h1>
+                <p class="welcome-header-snip animated fadeInUp">Developer, Hackathon Enthusiast, Student</p>
             </div>
         </div>
     </section>
     <section id="about-section-container">
         <div class="container">
             <div class="about-sec-item">
-                <p class="about-p">
-                    I <i class="fa fa-heart"></i> building things that help people.
-                </p>
-                <div class="about-sec-social">
-                    <a href="https://github.com/nazimamin" target="_blank"><i class="fa fa-github fa-2x"></i></a>
-                    <a href="https://www.linkedin.com/in/nazimamin" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>
-                    <a href="https://twitter.com/amin_nazim" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
-                    <a href="mailto:amin.nazim13@gmail.com" target="_top"><i class="fa fa-envelope fa-2x"></i></a>
+                <div class="about-p">
+                    <p>
+                        I <i class="fa fa-heart"></i> building things that help people.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
     <section id="project-section-container">
-        <div class="contact-card-position">
-            <div class="row">
-                <div class="col-xs-6 col-md-4">
-                    <div class="contact-card">
-                    </div>
+        <div class="card-holder">
+            <div class="card">
+                <img src="images/wander.jpg"></img>
+                <div class="project-desc">
+                    <h3 class="project-title">
+                        Wander
+                    </h3>
+                    <h5 class="project-info">
+                        A suggestions based travel app.
+                    </h5>
                 </div>
-                <div class="col-xs-6 col-md-4">
-                    <div class="contact-card">
-                    </div>
+            </div>
+            <div class="card"> <img src="images/pillstacks.jpg"></img>
+                <div class="project-desc">
+                    <h3 class="project-title">
+                        PillStacks
+                    </h3>
+                    <h5 class="project-info">
+                        An internet connected pill box.
+                    </h5>
                 </div>
-                <div class="col-xs-6 col-md-4">
-                    <div class="contact-card">
-                    </div>
+            </div>
+            <div class="card"> <img src="images/wander.jpg"></img>
+                <div class="project-desc">
+                    <h3 class="project-title">
+                        Wander
+                    </h3>
+                    <h5 class="project-info">
+                        A suggestions based travel app.
+                    </h5>
                 </div>
             </div>
         </div>
     </section>
     <section id="footer-section-container">
-        <div class="container">
+        <div class="footer-sec-item">
+            <div class="footer-sec-social">
+                <a href="https://github.com/nazimamin" target="_blank"><i class="fa fa-github fa-2x"></i></a>
+                <a href="https://www.linkedin.com/in/nazimamin" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>
+                <a href="https://twitter.com/amin_nazim" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+                <a href="mailto:amin.nazim13@gmail.com" target="_top"><i class="fa fa-envelope fa-2x"></i></a>
+            </div>
         </div>
     </section>
 
@@ -86,6 +106,7 @@
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/particles-js/particles.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -107,7 +128,6 @@
 
 
     <!-- build:js scripts/main.js -->
-    <script src="scripts/particles.min.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
 
