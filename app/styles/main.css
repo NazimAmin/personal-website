@@ -62,7 +62,7 @@ html {
 }
 
 #project-section-container {
-    margin: 30px;
+    margin-bottom: 30px;
 }
 
 .card-holder {
@@ -93,7 +93,7 @@ html {
     position: absolute;
     background-color: rgba(18, 2, 2, 0.75);
     width: 100%;
-    height: 31%;
+    height: 32%;
     text-align: left;
     bottom: 0;
 }
@@ -120,7 +120,7 @@ html {
 }
 
 #footer-section-container {
-    height: 20%;
+    height: 30%;
     margin-top: 10%;
 }
 
@@ -138,30 +138,28 @@ html {
     margin: 20px;
 }
 
+.footer-sec-item p {
+    margin: 10px;
+}
+
 .footer-sec-social a:hover {
     color: #ABB7B7;
 }
 
+.footer-sec-item .fa-code {
+    color: black;
+}
 
-/* Responsive: Portrait tablets and up */
+.footer-sec-item .fa-heart {
+    color: #CD4439;
+}
 
-@media screen and (min-width: 768px) {
-    .container {
-        max-width: 730px;
+@media not all and (min-width: 375px) {
+    .card-holder .card img {
+        width: 100%;
     }
-    /* Remove the padding we set earlier */
-    .header,
-    .marketing,
-    .footer {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    /* Space out the masthead */
-    .header {
-        margin-bottom: 30px;
-    }
-    /* Remove the bottom border on the jumbotron for visual effect */
-    .jumbotron {
-        border-bottom: 0;
+    .card-holder .card {
+        margin: 15px 10px;
+        width: 90%;
     }
 }
