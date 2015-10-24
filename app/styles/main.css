@@ -78,15 +78,15 @@ html {
 }
 
 .about-sec-item {
-    margin: auto;
+    margin: 30px;
 }
 
 .about-sec-item-lists {
-    font-weight: 100;
-    margin-top: 20%;
+    margin: 0;
     padding: 0;
-    list-style: none;
+    font-weight: 300;
     font-size: 18px;
+    list-style: none;
 }
 
 .about-sec-item-lists li {
@@ -94,20 +94,35 @@ html {
 }
 
 .about-sec-item-lists span:first-child {
+    text-align: left;
     letter-spacing: 0.5px;
-    padding-right: 5.28px;
 }
 
 .about-sec-item-lists span + span {
+    padding-left: 5px;
     float: right;
-    padding-left: 5.28px;
+}
+
+.about-list {
+    margin-top: 5%;
 }
 
 .about-sec-item p {
-    margin-top: 20%;
+    margin-top: 30%;
     text-align: center;
+    font-family: 'Roboto Mono';
     font-size: 28px;
-    font-weight: 100;
+    font-weight: 300;
+}
+
+.li-header {
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.left-side,
+.right-side {
+    margin: 0;
 }
 
 #project-section-container {
@@ -303,16 +318,56 @@ html {
     color: #CD4439;
 }
 
-@media all and (min-width: 600px) {
+@media all and (max-width: 1000px) {
+    .li-header {
+        margin-top: 8%;
+    }
+}
+
+@media not all and (min-width: 600px) {
+    .about-sec-item {
+        margin: 5px !important;
+        padding: 0;
+    }
+    .about-sec-item-lists {
+        font-size: 14px;
+        padding: 0;
+        margin: 0;
+    }
+    .about-sec-item p {
+        font-size: 18px;
+    }
+}
+
+@media all and (min-width: 608px) {
     .footer-sec-social a {
         padding: 20px;
     }
 }
 
-@media all and (min-width: 1000px) {
+@media all and (max-width: 608px) {
     .about-sec-item {
+        margin: 20px;
+    }
+    .about-sec-item-lists span {
+        text-align: left;
+    }
+}
+
+@media all and (min-width: 1000px) {
+    /* .about-sec-item {
         margin: auto;
         max-width: 720px;
+    }*/
+    .left-side {
+        padding-right: 20px;
+        float: left;
+        width: 50%;
+    }
+    .right-side {
+        width: 50%;
+        float: right;
+        padding-left: 20px;
     }
     .card .card-item .card-item-caption {
         transform: perspective(400) translate3d(0, 0, -100px);
@@ -323,7 +378,27 @@ html {
     }
 }
 
-@media not all and (min-width: 400px) {
+@media not all and (min-width: 450px) {
+    .footer-sec-item {
+        left: 0;
+        margin-top: 15%;
+        position: relative;
+        transform: none;
+    }
+}
+
+@media not all and (min-width: 375px) {
+    .about-sec-item-lists {
+        font-size: 12px;
+        padding: 0;
+        margin: 0;
+    }
+    .about-sec-item p {
+        font-size: 18px;
+    }
+    .about-sec-item {
+        margin: 0;
+    }
     .card-item img {
         width: 100%;
     }
@@ -336,11 +411,5 @@ html {
     }
     .card-item-caption .github h6 {
         display: none;
-    }
-    .footer-sec-item {
-        left: 0;
-        margin-top: 15%;
-        position: relative;
-        transform: none;
     }
 }

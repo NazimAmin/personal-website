@@ -4,10 +4,11 @@
 $(window).load(function () {
     $.each($('.card img'), function (index, value) {
         if (value) {
-            var colorThief = new ColorThief();
-            var colors = colorThief.getColor(value);
-            if (colors) {
-                var domColor = rgbToHex(colors);
+            var image = new Image();
+            image.src = value.src;
+            var colorThief = new ColorThief().getColor(image);
+            if (colorThief) {
+                var domColor = rgbToHex(colorThief);
                 var compColor = generateComplimentColor(domColor);
                 $(this).next('.project-desc').css({
                     'background': domColor,
