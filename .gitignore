@@ -64,3 +64,5 @@ build/Release
 
 # Dist directory
 dist
+node_modules
+.temp
