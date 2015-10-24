@@ -1,3 +1,23 @@
+//sometimes images doesn't finish loading 
+//making ColorThief throwing 'null' ofc. 
+//so wait for the page finish loading first
+$(window).load(function () {
+    $.each($('.card img'), function (index, value) {
+        if (value) {
+            var colorThief = new ColorThief();
+            var colors = colorThief.getColor(value);
+            if (colors) {
+                var domColor = rgbToHex(colors);
+                var compColor = generateComplimentColor(domColor);
+                $(this).next('.project-desc').css({
+                    'background': domColor,
+                    'color': compColor
+                });
+            }
+        }
+
+    });
+});
 $(document).ready(function () {
     particlesJS.load('welcome-header-container', 'scripts/particlesjs-config.json');
     $('.card').addClass('wow pulse card-hover');
@@ -33,22 +53,6 @@ $(document).ready(function () {
     });
     $('#footer-section-container').css({
         'color': cColor
-    });
-
-    $.each($('.card img'), function (index, value) {
-        if (value) {
-            var colorThief = new ColorThief();
-            var colors = colorThief.getColor(value);
-            if (colors) {
-                var domColor = rgbToHex(colors);
-                var compColor = generateComplimentColor(domColor);
-                $(this).next('.project-desc').css({
-                    'background': domColor,
-                    'color': compColor
-                });
-            }
-        }
-
     });
 
     $(window).scroll(function () {
@@ -94,7 +98,6 @@ $(document).ready(function () {
             }
         }
     });
-
 });
 
 function generateRandomColor() {
