@@ -7,7 +7,9 @@ $(document).ready(function () {
     });
 
     //init wow js - delay animation until scroll
-    var wow = new WOW({}).init();
+    var wow = new WOW({
+        mobile: false
+    }).init();
 
     //get random and it's complementary color
     // var color = generateRandomColor();
@@ -48,6 +50,7 @@ $(document).ready(function () {
         }
 
     });
+
     $(window).scroll(function () {
         if ($(window).scrollTop() + $(window).height() == $(document).height()) {
             $('#scroll #Layer_1').css({
@@ -75,7 +78,6 @@ $(document).ready(function () {
         }
 
     });
-
     $('#scroll').click(function () {
         var $this = $(this).parent();
         var $next = $this.next();
