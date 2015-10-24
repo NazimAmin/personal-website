@@ -79,12 +79,11 @@ html {
 
 .about-sec-item {
     margin: auto;
-    width: 60%;
 }
 
 .about-sec-item-lists {
     font-weight: 100;
-    margin-top: 30%;
+    margin-top: 20%;
     padding: 0;
     list-style: none;
     font-size: 18px;
@@ -125,15 +124,15 @@ html {
     margin: 30px auto;
 }
 
-.card-holder {
+.list-name {
+    margin-top: 30px;
+    font-size: 40px;
+    font-weight: 700;
     text-align: center;
 }
 
-.card-holder .list-name {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    font-size: 40px;
-    font-weight: 700;
+.card-holder {
+    text-align: center;
 }
 
 .card-holder li {
@@ -176,18 +175,18 @@ html {
     margin: 0 10px 10px;
 }
 
-.card-item {
-    width: inherit;
-    height: inherit;
+.card .card-item {
+    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
 }
 
-.card-item a {
+.card .card-item a {
     text-decoration: none;
 }
 
-.card-item img {
+.card .card-item img {
     width: inherit;
     height: inherit;
     left: 0;
@@ -217,8 +216,6 @@ html {
 
 .card-item-caption .github {
     margin-top: 10%;
-    text-align: center;
-    bottom: 5%;
 }
 
 .card .card-item:hover .card-item-caption,
@@ -266,7 +263,7 @@ html {
 }
 
 .footer-sec-item {
-    margin-top: calc(4%);
+    margin-top: 4%;
     text-align: center;
     position: absolute;
     left: 50%;
@@ -281,7 +278,8 @@ html {
 .footer-sec-social a {
     font-size: 18px;
     color: #84EFE2;
-    margin: 20px;
+    margin: auto;
+    padding: 10px;
 }
 
 .footer-sec-social a:hover {
@@ -300,12 +298,37 @@ html {
     color: #CD4439;
 }
 
+@media all and (min-width: 600px) {
+    .footer-sec-social a {
+        padding: 20px;
+    }
+}
+
+@media all and (min-width: 1000px) {
+    .about-sec-item {
+        margin: auto;
+        max-width: 720px;
+    }
+}
+
 @media not all and (min-width: 375px) {
-    .card-holder .card img {
+    .card-item img {
         width: 100%;
     }
     .card-holder .card {
         margin: 15px 10px;
         width: 90%;
+    }
+    .card-item-caption .github {
+        margin-top: 5%;
+    }
+    .card-item-caption .github h6 {
+        display: none;
+    }
+    .footer-sec-item {
+        left: 0;
+        margin-top: 15%;
+        position: relative;
+        transform: none;
     }
 }

@@ -34,13 +34,18 @@ $(document).ready(function () {
     });
 
     $.each($('.card img'), function (index, value) {
-        var colorThief = new ColorThief();
-        var domColor = rgbToHex(colorThief.getColor(value));
-        var compColor = generateComplimentColor(domColor);
-        $(this).next('.project-desc').css({
-            'background': domColor,
-            'color': compColor
-        });
+        if (value) {
+            var colorThief = new ColorThief();
+            var colors = colorThief.getColor(value);
+            if (colors) {
+                var domColor = rgbToHex(colors);
+                var compColor = generateComplimentColor(domColor);
+                $(this).next('.project-desc').css({
+                    'background': domColor,
+                    'color': compColor
+                });
+            }
+        }
 
     });
     $(window).scroll(function () {
