@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
-    $('.card').addClass('wow pulse hvr-grow');
+    $('.card').addClass('wow pulse card-hover');
+
     $('.fa-heart, .fa-code').bind('mouseenter mouseleave click', function () {
         $(this).toggleClass('animated rubberBand');;
     });
@@ -9,12 +10,38 @@ $(document).ready(function () {
     var wow = new WOW({}).init();
 
     //get random and it's complementary color
-    var color = generateRandomColor();
-    var cColor = generateComplimentColor(color);
+    // var color = generateRandomColor();
+    var color = Please.make_color({
+        colors_returned: 4
+    });
+
+    var cColor = '#E5E5E5'; //generateComplimentColor(color);
 
     $('body').css({
-        'background': '#' + color,
-        'color': '#' + cColor
+        'background': color[0],
+        'color': cColor
+    });
+    $('#about-section-container').css({
+        'background': color[1],
+        'color': cColor
+    });
+    $('#project-section-container').css({
+        'background': color[2],
+        'color': cColor
+    });
+    $('#footer-section-container').css({
+        'color': cColor
+    });
+
+    $.each($('.card img'), function (index, value) {
+        var colorThief = new ColorThief();
+        var domColor = rgbToHex(colorThief.getColor(value));
+        var compColor = generateComplimentColor(domColor);
+        $(this).next('.project-desc').css({
+            'background': domColor,
+            'color': compColor
+        });
+
     });
 
     //init particles js
@@ -146,12 +173,10 @@ $(document).ready(function () {
             $('#welcome-header-container').append($('#scroll'));
         }
         if ($(window).scrollTop() >= 705 && $(window).scrollTop() <= 730) {
-            console.log('ok');
-            var color = generateRandomColor();
+            var color = Please.make_color();
             var cColor = generateComplimentColor(color);
-
             $('body').css({
-                'background': '#' + color,
+                'background': color,
                 'color': '#' + cColor
             });
         }
@@ -178,9 +203,18 @@ $(document).ready(function () {
 });
 
 function generateRandomColor() {
-    return (((Math.random() * '0xFFFFFF').toString(16)).slice(-6));
+    return '#' + Math.floor(Math.random() * '0xFFFFFF').toString(16);
 }
 
 function generateComplimentColor(randomColor) {
-    return (('0xffffff' ^ '0x' + randomColor).toString(16));
+    return randomColor.indexOf('#') == 0 ? '#' + (('0xffffff' ^ '0x' + randomColor.substring(1)).toString(16)) : '#' + (('0xffffff' ^ '0x' + randomColor).toString(16));
+}
+
+function rgbToHex(rgb) {
+    return '#' + intToHex(rgb[0]) + intToHex(rgb[1]) + intToHex(rgb[2]);
+}
+
+function intToHex(intValue) {
+    var hexValue = intValue.toString(16);
+    return hexValue.length == 1 ? '0' + hexValue : hexValue;
 }
