@@ -348,10 +348,9 @@ html {
     .about-sec-item p {
         font-size: 18px;
     }
-}
-
-.list-name {
-    font-size: 28px;
+    .list-name {
+        font-size: 28px;
+    }
 }
 
 @media all and (min-width: 608px) {
