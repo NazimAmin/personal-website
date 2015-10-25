@@ -350,6 +350,10 @@ html {
     }
 }
 
+.list-name {
+    font-size: 28px;
+}
+
 @media all and (min-width: 608px) {
     .footer-sec-social a {
         padding: 20px;
