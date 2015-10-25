@@ -4,9 +4,7 @@
 $(window).load(function () {
     $.each($('.card img'), function (index, value) {
         if (value) {
-            var image = new Image();
-            image.src = value.src;
-            var colorThief = new ColorThief().getColor(image);
+            var colorThief = new ColorThief().getColor(value);
             if (colorThief) {
                 var domColor = rgbToHex(colorThief);
                 var compColor = generateComplimentColor(domColor);
