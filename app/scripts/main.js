@@ -62,6 +62,14 @@ $(document).ready(function () {
             $('#scroll #Layer_2').css({
                 'display': 'block'
             });
+
+            var color = Please.make_color();
+            var cColor = generateComplimentColor(color);
+            $('body').css({
+                'background': color,
+                'color': '#' + cColor
+            });
+
         } else if ($(window).scrollTop() == $("#welcome-header-container").offset().top) {
             $('#scroll #Layer_1').css({
                 'display': 'block'
@@ -70,15 +78,6 @@ $(document).ready(function () {
                 'display': 'none'
             });
             $('#welcome-header-container').append($('#scroll'));
-        }
-
-        if ($(document).height() - ($(window).height() + $(window).scrollTop()) === 0) {
-            var color = Please.make_color();
-            var cColor = generateComplimentColor(color);
-            $('body').css({
-                'background': color,
-                'color': '#' + cColor
-            });
         }
 
     });
