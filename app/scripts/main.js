@@ -71,7 +71,8 @@ $(document).ready(function () {
             });
             $('#welcome-header-container').append($('#scroll'));
         }
-        if ($(window).scrollTop() >= 705 && $(window).scrollTop() <= 730) {
+
+        if ($(document).height() - ($(window).height() + $(window).scrollTop()) === 0) {
             var color = Please.make_color();
             var cColor = generateComplimentColor(color);
             $('body').css({
