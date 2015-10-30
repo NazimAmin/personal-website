@@ -30,6 +30,8 @@ html {
     position: absolute;
     top: 40% !important;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
@@ -40,8 +42,6 @@ html {
 .rounded-photo {
     width: 130px;
     height: 130px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
     border-radius: 50%;
     display: table;
     margin: 0 auto;
@@ -58,6 +58,7 @@ html {
     opacity: 0.5;
     cursor: pointer;
     -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
 }
 
@@ -213,6 +214,7 @@ html {
     height: 68%;
     width: inherit;
     position: absolute;
+    -webkit-transition: opacity 0.1s, -webkit-transform 0.35s;
     transition: opacity 0.1s, transform 0.35s;
     /*transform: perspective(400) translate3d(0, 0, -100px);*/
 }
@@ -240,10 +242,14 @@ html {
 .card-hover {
     display: inline-block;
     vertical-align: middle;
+    -webkit-transform: translateZ(0);
     transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     -moz-osx-font-smoothing: grayscale;
+    -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
+    -webkit-transition-property: -webkit-transform;
     transition-property: transform;
 }
 
@@ -283,6 +289,7 @@ html {
     position: absolute;
     left: 50%;
     -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
 }
 
@@ -375,10 +382,12 @@ html {
         padding-left: 20px;
     }
     .card .card-item .card-item-caption {
+        -webkit-transform: perspective(400) translate3d(0, 0, -100px);
         transform: perspective(400) translate3d(0, 0, -100px);
     }
     .card .card-item:hover .card-item-caption,
     .card .card-item:hover {
+        -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
     }
 }
@@ -388,6 +397,8 @@ html {
         left: 0;
         margin-top: 15%;
         position: relative;
+        -webkit-transform: none;
+        -ms-transform: none;
         transform: none;
     }
 }
