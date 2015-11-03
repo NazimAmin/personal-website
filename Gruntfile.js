@@ -55,7 +55,7 @@ module.exports = function (grunt) {
 
         browserSync: {
             options: {
-                notify: false,
+                notify: true,
                 background: true,
                 watchOptions: {
                     ignored: ''
