@@ -1,5 +1,5 @@
-//sometimes images doesn't finish loading 
-//making ColorThief throwing 'null' ofc. 
+//sometimes images doesn't finish loading
+//making ColorThief throwing 'null' ofc.
 //so wait for the page finish loading first
 $(window).load(function () {
     $.each($('.card img'), function (index, value) {
@@ -24,7 +24,7 @@ $(document).ready(function () {
     $('.fa-heart, .fa-code').bind('mouseenter mouseleave click', function () {
         $(this).toggleClass('animated rubberBand');;
     });
-
+    loadProjects();
     //init wow js - delay animation until scroll
     var wow = new WOW({
         mobile: false
@@ -114,4 +114,37 @@ function rgbToHex(rgb) {
 function intToHex(intValue) {
     var hexValue = intValue.toString(16);
     return hexValue.length == 1 ? '0' + hexValue : hexValue;
+}
+
+function loadProjects(){
+    $.ajax({
+      url: 'data/projects.json',
+      dataType: "json",
+      success: function (data) {
+          drawProjectsToView(data);
+      }
+});
+}
+function drawProjectsToView(projects){
+    $.each(projects.projects, function(index, el) {
+        var tags = "";
+        $.each(el.caption.tags, function(index, value) {
+            tags += ('<li>'+value+'</li>');
+        });
+        var make_card = $('<div class="card">'+
+            '<div class="card-item">'+
+                '<img src="/images/'+el.image+'"alt='+el.title+'>'+
+                '<div class="project-desc">'+
+                    '<h3 class="project-title">'+el.title+'</h3>'+
+                    '<h5 class="project-info">'+el.info+'</h5>'+
+                '</div>'+
+                '<div class="card-item-caption">'+
+                    '<a href="'+el.link+'">'+
+                        '<p><span class="fa fa-code fa-lg"></span> '+el.caption.at+'</p>'+
+                        '<span class="card-use-tag">'+tags+
+                    '</span>'+
+                        '<div class="github"><i class="fa fa-github fa-2x"></i>'+
+                            '<h6>GitHub</h6></div></a></div></div></div>');
+        $('.card-holder').append(make_card);
+    });
 }
