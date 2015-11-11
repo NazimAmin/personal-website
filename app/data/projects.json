@@ -1,50 +1,52 @@
-{"projects":[
-    {
-        "title": "Fill the Seat",
-        "image": "fillseat.png",
-        "info": "Provides incentives for users to purchase the remaining few tickets on flights.",
-        "link": "https://github.com/NazimAmin/YHack-FillSeat",
-        "caption": {
-            "at": "at YHack - Fall 2015",
-            "tags": ["AngularJS", "NodeJS", "MongoDB", "SCSS"]
-        }
-    },{
-        "title": "Wander",
-        "image": "wander.jpg",
-        "info": "A suggestions based travel app.",
-        "link": "https://github.com/genegurvich/wander",
-        "caption": {
-            "at": "at PennApps XII - Fall 2015",
-            "tags": ["ionic", "Python", "Flask", "jQuery"]
-        }
+{
+    "projects": [
+        {
+            "title": "Fill the Seat",
+            "image": "fillseat.png",
+            "info": "Provides incentives for users to purchase the remaining few tickets on flights.",
+            "link": "https://github.com/NazimAmin/YHack-FillSeat",
+            "caption": {
+                "at": "at YHack - Fall 2015",
+                "tags": ["AngularJS", "NodeJS", "MongoDB", "SCSS"]
+            }
+    }, {
+            "title": "Wander",
+            "image": "wander.jpg",
+            "info": "A suggestions based travel app.",
+            "link": "https://github.com/genegurvich/wander",
+            "caption": {
+                "at": "at PennApps XII - Fall 2015",
+                "tags": ["ionic", "Python", "Flask", "jQuery"]
+            }
     },
-    {
-        "title": "RateSBU",
-        "image": "RateSBU.jpg",
-        "info": "Unofficial REST API &amp; Chrome extension for RateMyProfessor site.",
-        "link": "https://github.com/NazimAmin/RateSBU",
-        "caption": {
-            "at": "Unofficial RateMyProfessor API <br> Extension: shows RMP's rating in Stony Brook University's SOLAR.",
-            "tags": ["Python", "Flask", "jQuery", "CSS"]
-        }
-    },{
-        "title": "PillStacks",
-        "image": "pillstacks.jpg",
-        "info": "An internet connected pill box.",
-        "link": "https://github.com/NazimAmin/PennAppsIOTPillBox",
-        "caption": {
-            "at": "at PennApps XI - Winter 2015",
-            "tags": ["Intel-Edison", "Node.js", "MongoDB"]
-        }
+        {
+            "title": "RateSBU",
+            "image": "RateSBU.jpg",
+            "info": "Unofficial REST API &amp; Chrome extension for RateMyProfessor site.",
+            "link": "https://github.com/NazimAmin/RateSBU",
+            "caption": {
+                "at": "Unofficial RateMyProfessor API <br> Extension: shows RMP's rating in Stony Brook University's SOLAR.",
+                "tags": ["Python", "Flask", "jQuery", "CSS"]
+            }
+    }, {
+            "title": "PillStacks",
+            "image": "pillstacks.jpg",
+            "info": "An internet connected pill box.",
+            "link": "https://github.com/NazimAmin/PennAppsIOTPillBox",
+            "caption": {
+                "at": "at PennApps XI - Winter 2015",
+                "tags": ["Intel-Edison", "Node.js", "MongoDB"]
+            }
     },
-    {
-        "title": "HotelManagement",
-        "image": "hms.png",
-        "info": "A simple hotel management tool built with C#",
-        "link": "https://github.com/NazimAmin/HotelManagement",
-        "caption": {
-            "at": "a simple HotelManagement tool that utilizes data from/to the sql database.",
-            "tags": ["C#", "Metro", "SQL", "XML"]
-        }
+        {
+            "title": "HotelManagement",
+            "image": "hms.png",
+            "info": "A simple hotel management tool built with C#",
+            "link": "https://github.com/NazimAmin/HotelManagement",
+            "caption": {
+                "at": "a simple HotelManagement tool that utilizes data from/to the sql database.",
+                "tags": ["C#", "Metro", "SQL", "XML"]
+            }
     }
-    ]}
+    ]
+}

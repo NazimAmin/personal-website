@@ -65,11 +65,15 @@ html {
 #Layer_1 {
     display: block;
     z-index: 999;
+    width: 100px;
+    height: 100px;
 }
 
 #Layer_2 {
     display: none;
     z-index: 999;
+    width: 100px;
+    height: 100px;
 }
 
 #about-section-container {

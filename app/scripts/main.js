@@ -18,13 +18,14 @@ $(window).load(function () {
     });
 });
 $(document).ready(function () {
+    loadProjects();
     particlesJS.load('welcome-header-container', 'scripts/particlesjs-config.json');
     $('.card').addClass('wow pulse card-hover');
 
     $('.fa-heart, .fa-code').bind('mouseenter mouseleave click', function () {
         $(this).toggleClass('animated rubberBand');;
     });
-    loadProjects();
+
     //init wow js - delay animation until scroll
     var wow = new WOW({
         mobile: false
@@ -116,35 +117,36 @@ function intToHex(intValue) {
     return hexValue.length == 1 ? '0' + hexValue : hexValue;
 }
 
-function loadProjects(){
+function loadProjects() {
     $.ajax({
-      url: 'data/projects.json',
-      dataType: "json",
-      success: function (data) {
-          drawProjectsToView(data);
-      }
-});
+        url: 'data/projects.json',
+        dataType: "json",
+        success: function (data) {
+            drawProjectsToView(data);
+        }
+    });
 }
-function drawProjectsToView(projects){
-    $.each(projects.projects, function(index, el) {
+
+function drawProjectsToView(projects) {
+    $.each(projects.projects, function (index, el) {
         var tags = "";
-        $.each(el.caption.tags, function(index, value) {
-            tags += ('<li>'+value+'</li>');
+        $.each(el.caption.tags, function (index, value) {
+            tags += ('<li>' + value + '</li>');
         });
-        var make_card = $('<div class="card">'+
-            '<div class="card-item">'+
-                '<img src="/images/'+el.image+'"alt='+el.title+'>'+
-                '<div class="project-desc">'+
-                    '<h3 class="project-title">'+el.title+'</h3>'+
-                    '<h5 class="project-info">'+el.info+'</h5>'+
-                '</div>'+
-                '<div class="card-item-caption">'+
-                    '<a href="'+el.link+'">'+
-                        '<p><span class="fa fa-code fa-lg"></span> '+el.caption.at+'</p>'+
-                        '<span class="card-use-tag">'+tags+
-                    '</span>'+
-                        '<div class="github"><i class="fa fa-github fa-2x"></i>'+
-                            '<h6>GitHub</h6></div></a></div></div></div>');
+        var make_card = $('<div class="card">' +
+            '<div class="card-item">' +
+            '<img src="/images/' + el.image + '"alt=' + el.title + '>' +
+            '<div class="project-desc">' +
+            '<h3 class="project-title">' + el.title + '</h3>' +
+            '<h5 class="project-info">' + el.info + '</h5>' +
+            '</div>' +
+            '<div class="card-item-caption">' +
+            '<a href="' + el.link + '">' +
+            '<p><span class="fa fa-code fa-lg"></span> ' + el.caption.at + '</p>' +
+            '<span class="card-use-tag">' + tags +
+            '</span>' +
+            '<div class="github"><i class="fa fa-github fa-2x"></i>' +
+            '<h6>GitHub</h6></div></a></div></div></div>');
         $('.card-holder').append(make_card);
     });
 }
