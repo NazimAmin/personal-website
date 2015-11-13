@@ -1,25 +1,26 @@
-//sometimes images doesn't finish loading
-//making ColorThief throwing 'null' ofc.
-//so wait for the page finish loading first
 window.addEventListener('load', function () {
-    $.each($('.card img'), function (index, value) {
-        (function loadImageAndSetColor() {
-            if (value.complete) {
-                var vibrant = new Vibrant(value);
-                if (vibrant) {
-                    var bgColor = vibrant.VibrantSwatch.getHex();
-                    var textColor = vibrant.VibrantSwatch.getTitleTextColor();
-                    $(value).next('.project-desc').css({
-                        'background': bgColor,
-                        'color': textColor
-                    });
+    (function loadImageAndSetColor() {
+        var card = document.getElementsByClassName('card');
+        if (card.length > 0) {
+            for (var i = 0; i < card.length; i++) {
+                var value = card[i].getElementsByTagName('img')[0];
+                if (value.complete) {
+                    var vibrant = new Vibrant(value);
+                    if (vibrant) {
+                        var bgColor = vibrant.VibrantSwatch.getHex();
+                        var textColor = vibrant.VibrantSwatch.getTitleTextColor();
+                        $(value).next('.project-desc').css({
+                            'background': bgColor,
+                            'color': textColor
+                        });
+                    }
                 }
-            } else {
-                setTimeout(loadImageAndSetColor, 2000);
             }
-        })();
-    });
 
+        } else {
+            setTimeout(loadImageAndSetColor, 500);
+        }
+    })();
     /* $.each($('.card img'), function (index, value) {
         if (value) {
             var colorThief = new ColorThief().getColor(value);
