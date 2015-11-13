@@ -1,8 +1,26 @@
 //sometimes images doesn't finish loading
 //making ColorThief throwing 'null' ofc.
 //so wait for the page finish loading first
-$(window).load(function () {
+window.addEventListener('load', function () {
     $.each($('.card img'), function (index, value) {
+        (function loadImageAndSetColor() {
+            if (value.complete) {
+                var vibrant = new Vibrant(value);
+                if (vibrant) {
+                    var bgColor = vibrant.VibrantSwatch.getHex();
+                    var textColor = vibrant.VibrantSwatch.getTitleTextColor();
+                    $(value).next('.project-desc').css({
+                        'background': bgColor,
+                        'color': textColor
+                    });
+                }
+            } else {
+                setTimeout(loadImageAndSetColor, 2000);
+            }
+        })();
+    });
+
+    /* $.each($('.card img'), function (index, value) {
         if (value) {
             var colorThief = new ColorThief().getColor(value);
             if (colorThief) {
@@ -15,8 +33,9 @@ $(window).load(function () {
             }
         }
 
-    });
+    });*/
 });
+
 $(document).ready(function () {
     loadProjects();
     particlesJS.load('welcome-header-container', 'scripts/particlesjs-config.json');
@@ -98,6 +117,7 @@ $(document).ready(function () {
             }
         }
     });
+
 });
 
 function generateRandomColor() {

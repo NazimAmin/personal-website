@@ -215,7 +215,7 @@ html {
     top: 0;
     left: 0;
     opacity: 0;
-    height: 68%;
+    height: 65%;
     width: inherit;
     position: absolute;
     -webkit-transition: opacity 0.1s, -webkit-transform 0.35s;

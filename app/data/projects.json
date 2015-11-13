@@ -1,7 +1,7 @@
 {
     "projects": [
         {
-            "title": "Fill the Seat",
+            "title": "FilltheSeat",
             "image": "fillseat.png",
             "info": "Provides incentives for users to purchase the remaining few tickets on flights.",
             "link": "https://github.com/NazimAmin/YHack-FillSeat",
