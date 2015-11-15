@@ -16,6 +16,7 @@ window.addEventListener('load', function () {
                     }
                 }
             }
+            $('.card').addClass('wow pulse card-hover');
 
         } else {
             setTimeout(loadImageAndSetColor, 500);
@@ -40,7 +41,6 @@ window.addEventListener('load', function () {
 $(document).ready(function () {
     loadProjects();
     particlesJS.load('welcome-header-container', 'scripts/particlesjs-config.json');
-    $('.card').addClass('wow pulse card-hover');
 
     $('.fa-heart, .fa-code').bind('mouseenter mouseleave click', function () {
         $(this).toggleClass('animated rubberBand');;

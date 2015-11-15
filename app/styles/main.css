@@ -220,7 +220,13 @@ html {
     position: absolute;
     -webkit-transition: opacity 0.1s, -webkit-transform 0.35s;
     transition: opacity 0.1s, transform 0.35s;
-    /*transform: perspective(400) translate3d(0, 0, -100px);*/
+    -webkit-transform: perspective(400) translate3d(0, 0, -100px);
+    transform: perspective(400) translate3d(0, 0, -100px);
+}
+
+.card .card-item:hover .card-item-caption {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
 }
 
 .card-item-caption {
@@ -384,15 +390,6 @@ html {
         width: 50%;
         float: right;
         padding-left: 20px;
-    }
-    .card .card-item .card-item-caption {
-        -webkit-transform: perspective(400) translate3d(0, 0, -100px);
-        transform: perspective(400) translate3d(0, 0, -100px);
-    }
-    .card .card-item:hover .card-item-caption,
-    .card .card-item:hover {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
     }
 }
 
