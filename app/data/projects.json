@@ -6,7 +6,7 @@
             "info": "Provides incentives for users to purchase the remaining few tickets on flights.",
             "link": "https://github.com/NazimAmin/YHack-FillSeat",
             "caption": {
-                "at": "at YHack - Fall 2015",
+                "at": "YHack - Fall 2015",
                 "tags": ["AngularJS", "NodeJS", "MongoDB", "SCSS"]
             }
     }, {
@@ -15,7 +15,7 @@
             "info": "A suggestions based travel app.",
             "link": "https://github.com/genegurvich/wander",
             "caption": {
-                "at": "at PennApps XII - Fall 2015",
+                "at": "PennApps XII - Fall 2015",
                 "tags": ["ionic", "Python", "Flask", "jQuery"]
             }
     },
@@ -26,7 +26,7 @@
             "link": "https://github.com/NazimAmin/RateSBU",
             "caption": {
                 "at": "Unofficial RateMyProfessor API <br> Extension: shows RMP's rating in Stony Brook University's SOLAR.",
-                "tags": ["Python", "Flask", "jQuery", "CSS"]
+                "tags": ["Python", "Flask", "jQuery"]
             }
     }, {
             "title": "PillStacks",
@@ -34,7 +34,7 @@
             "info": "An internet connected pill box.",
             "link": "https://github.com/NazimAmin/PennAppsIOTPillBox",
             "caption": {
-                "at": "at PennApps XI - Winter 2015",
+                "at": "PennApps XI - Winter 2015",
                 "tags": ["Intel-Edison", "Node.js", "MongoDB"]
             }
     },
@@ -45,7 +45,7 @@
             "link": "https://github.com/NazimAmin/HotelManagement",
             "caption": {
                 "at": "a simple HotelManagement tool that utilizes data from/to the sql database.",
-                "tags": ["C#", "Metro", "SQL", "XML"]
+                "tags": ["C#", "SQL", "XML"]
             }
     }
     ]

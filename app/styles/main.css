@@ -79,7 +79,6 @@ html {
 #about-section-container {
     background: #4E7376;
     color: #84EFE2;
-    height: 100%;
 }
 
 .about-sec-item {
@@ -108,9 +107,12 @@ html {
     float: right;
 }
 
+
+/*
 .about-list {
     margin-top: 5%;
 }
+*/
 
 .about-sec-item p {
     margin-top: 30%;
@@ -129,13 +131,12 @@ html {
     background: #4E7376;
     color: #84EFE2;
     height: auto;
-    min-height: 100% !important;
 }
 
 .indent-line {
     background: rgba(229, 229, 229, 0.5);
     width: 150px;
-    height: 0.5px;
+    height: 1px;
     margin: 30px auto;
 }
 
@@ -149,7 +150,7 @@ html {
 .card-holder {
     position: relative;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .card-holder li {
@@ -160,7 +161,6 @@ html {
 .card {
     width: 300px;
     height: 300px;
-    margin: 30px;
     display: inline-block;
     position: relative;
     border-radius: 2px;
@@ -169,6 +169,7 @@ html {
     border: none;
     background-position: center;
     cursor: pointer;
+    margin: 30px;
 }
 
 .card .project-desc {
@@ -290,11 +291,12 @@ html {
 #footer-section-container {
     background-color: #4E7376;
     color: #84EFE2;
-    height: 30%;
+    height: 240px;
 }
 
 .footer-sec-item {
     margin-top: 4%;
+    margin-bottom: 4%;
     text-align: center;
     position: absolute;
     left: 50%;
@@ -323,11 +325,31 @@ html {
 }
 
 .footer-sec-item .fa-code {
-    color: black;
+    color: #333333;
 }
 
 .footer-sec-item .fa-heart {
     color: #CD4439;
+}
+
+.footer-sec-item .fa-coffee {
+    color: #333333;
+}
+
+.footer-sec-social a .github:hover {
+    color: #333333;
+}
+
+.footer-sec-social a .linkedin:hover {
+    color: #0077b5;
+}
+
+.footer-sec-social a .twitter:hover {
+    color: #55acee;
+}
+
+.footer-sec-social a .mail:hover {
+    color: #2c9ab7;
 }
 
 @media all and (max-width: 1000px) {
@@ -356,7 +378,7 @@ html {
     }
 }
 
-@media not all and (min-width: 600px) {
+@media (max-width: 600px) {
     .about-sec-item-lists {
         font-size: 16px;
         padding: 0;
@@ -393,7 +415,7 @@ html {
     }
 }
 
-@media not all and (min-width: 450px) {
+@media (max-width: 450px) {
     .footer-sec-item {
         left: 0;
         margin-top: 15%;
@@ -402,6 +424,12 @@ html {
         -ms-transform: none;
         transform: none;
     }
+    .card {
+        margin: 30px 0 30px 0 !important;
+    }
+    .card-holder {
+        margin-bottom: 15px;
+    }
 }
 
 @media not all and (min-width: 375px) {
@@ -409,7 +437,6 @@ html {
         width: 100%;
     }
     .card-holder .card {
-        margin: 15px 10px;
         width: 90%;
     }
     .card-item-caption .github {
@@ -417,5 +444,13 @@ html {
     }
     .card-item-caption .github h6 {
         display: none;
+    }
+}
+
+@media (max-width: 320px) {
+    .card .project-info {
+        font-size: 12px;
+        line-height: 1.5;
+        margin: 0 10px 10px;
     }
 }

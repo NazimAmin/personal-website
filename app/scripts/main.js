@@ -53,25 +53,28 @@ $(document).ready(function () {
 
     //get random and it's complementary color
     // var color = generateRandomColor();
-    var color = Please.make_color({
+    /*var color = Please.make_color({
         colors_returned: 4
     });
-
+    */
     var cColor = '#E5E5E5'; //generateComplimentColor(color);
 
+//rgb(114, 173, 191) background: rgb(114, 183, 191)  rgb(114, 191, 182)  rgb(114, 173, 191)
+
     $('body').css({
-        'background': color[0],
+        'background': 'rgb(114, 173, 191)',
         'color': cColor
     });
     $('#about-section-container').css({
-        'background': color[1],
+        'background': 'rgb(114, 191, 182)',
         'color': cColor
     });
     $('#project-section-container').css({
-        'background': color[2],
+        'background': 'rgb(114, 183, 191)',
         'color': cColor
     });
     $('#footer-section-container').css({
+        'background' : 'rgb(114, 191, 187)',
         'color': cColor
     });
 
@@ -84,13 +87,13 @@ $(document).ready(function () {
                 'display': 'block'
             });
 
-            var color = Please.make_color();
+            /*var color = Please.make_color();
             var cColor = generateComplimentColor(color);
             $('body').css({
                 'background': color,
                 'color': '#' + cColor
             });
-
+*/
         } else if ($(window).scrollTop() == $("#welcome-header-container").offset().top) {
             $('#scroll #Layer_1').css({
                 'display': 'block'
