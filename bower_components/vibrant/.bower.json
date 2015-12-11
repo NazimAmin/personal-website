@@ -38,8 +38,8 @@
     "branch": "master",
     "commit": "65aff929b74fe4f0ab3cc0fea79c6100cee07f3a"
   },
-  "_source": "git://github.com/jariz/vibrant.js.git",
+  "_source": "https://github.com/jariz/vibrant.js.git",
   "_target": "*",
-  "_originalSource": "vibrant",
+  "_originalSource": "https://github.com/jariz/vibrant.js.git",
   "_direct": true
 }

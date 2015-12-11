@@ -1,5 +1,15 @@
 {
     "projects": [
+      {
+          "title": "NDTNDT",
+          "image": "NDTNDT.png",
+          "info": "An ebay like auction site focusing on proxy bidding.",
+          "link": "https://github.com/NazimAmin/NDTNDT",
+          "caption": {
+              "at": "CSE305 - Fall 2015",
+              "tags": ["AngularJS", "Python", "SQL", "SCSS"]
+          }
+  },
         {
             "title": "FillSeat",
             "image": "fillseat.png",

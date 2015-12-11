@@ -7,7 +7,7 @@
     "animate.css": "https://github.com/daneden/animate.css.git",
     "particles-js": "https://github.com/VincentGarreau/particles.js.git",
     "font-awesome": "~4.4.0",
-    "wow": "https://github.com/matthieua/WOW.git",
+    "wow": "~1.1.2",
     "pleasejs": "https://github.com/Fooidge/PleaseJS.git",
     "color-thief": "https://github.com/lokesh/color-thief.git",
     "jquery.scrollTo": "~2.1.2",
